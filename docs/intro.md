@@ -1,47 +1,53 @@
 ---
+title: ▶ Introduction
+slug: "/"
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+## Xin chào 👋
 
-Let's discover **Docusaurus in less than 5 minutes**.
+That means "hello" in Vietnamese.
 
-## Getting Started
+This is my "warchest"🎁 where I try to write regularly, learn in public and share the thought-process.
 
-Get started by **creating a new site**.
+## 🗒 Notes
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+My notes will be on random, ad-hoc things I'm working on at any one time, but will mostly involve cloud, kubernetes, devops, automation, security.
 
-### What you'll need
+The sidebar menu and documents will grow as I continue to add more notes to the garden.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## 🗓️ Currently
 
-## Generate a new site
+Things I'm working or focused on:-
 
-Generate a new Docusaurus site using the **classic template**.
+- TBD
 
-The classic template will automatically be added to your project after you run the command:
+## 📚 [Books](books/reading-list.md)
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+My reading list, what I'm currently reading and notes on books I've read.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Current reading:
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+| Title | Author |
+| :---- | :----- |
+| TBD   | TBD    |
 
-## Start your site
+I have a mix of kindle and physical books that I read.
 
-Run the development server:
+## 📗 Study
 
-```bash
-cd my-website
-npm run start
-```
+These are the study and exam notes for certifications, courses (newest->oldest) that I have passed.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+- ✅ TBD
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+## 💻 Interview
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+These are the notes for interview, sumarizing and listing all my notes in the different way for interview purpose.
+
+## 💻 Engineer
+
+Building, putting everything I dont know where is perfect place to put. It should be related to Applications, Software Engineering, Infrastructure Architecture and Engineering.
+
+## 🗃 Archive
+
+Old things I don't want to forget.
