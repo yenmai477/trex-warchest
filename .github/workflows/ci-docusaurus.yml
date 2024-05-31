@@ -57,6 +57,11 @@ jobs:
                 repo: context.repo.repo,
                 commit_sha: context.sha,
               })
+
+              if(!result || !result.data || !result.data.length) {
+                console.log('No PR found for commit ' + context.sha)
+                return
+              }
               const issueNumber = result.data[0].number
               if(issueNumber){
                 await github.rest.issues.createComment({
