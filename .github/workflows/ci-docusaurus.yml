@@ -11,7 +11,7 @@ permissions:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  ci:
+  build-and-tests:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -22,28 +22,27 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "18"
-      # Install and build Docusaurus website
-      - name: Build Docusaurus website
-        run: |
-          npm install
-          npm run build
-
+      # # Install and build Docusaurus website
+      # - name: Build Docusaurus website
+      #   run: |
+      #     npm install
+      #     npm run build
       # Create Preview URL for testing
-      - name: Create Preview URL
+      - name: Build and Create Preview URL
         uses: jsmrcaga/action-netlify-deploy@master
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           deploy_alias: ${{ env.BRANCH_NAME }}
 
-        # Creates a status check with link to preview
-      - name: Status check
-        uses: Sibz/github-status-action@v1.1.1
-        with:
-          authToken: ${{ secrets.GITHUB_TOKEN }}
-          context: Netlify preview
-          state: success
-          target_url: ${{ env.NETLIFY_PREVIEW_URL }}
+      # # Creates a status check with link to preview
+      # - name: Status check
+      #   uses: Sibz/github-status-action@v1.1.1
+      #   with:
+      #     authToken: ${{ secrets.GITHUB_TOKEN }}
+      #     context: Netlify preview
+      #     state: success
+      #     target_url: ${{ env.NETLIFY_PREVIEW_URL }}
 
       # Comment preview URL on PR
       - name: Comment URL Preview on PR
