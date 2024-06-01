@@ -45,9 +45,14 @@ jobs:
           
       # Netlify import env
       - name: Netlify import env
-        run: netlify env:import .env --site ${{ secrets.NETLIFY_SITE_ID }} --replace-existing --context production
-        
+        run: |
+          netlify link
+          netlify env:import .env --replace-existing
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       # Install and build Docusaurus website
+      
       - name: Build Docusaurus website
         run: |
           npm install
