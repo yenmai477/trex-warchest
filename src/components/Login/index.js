@@ -10,12 +10,16 @@ import "./styles.css";
 
 // Configure FirebaseUI.
 export const uiConfig = {
-  signInOptions: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-  requireDisplayName: false,
-  disableSignUp: {
-    status: true,
-    adminEmail: "",
-  },
+  signInOptions: [
+    {
+      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      requireDisplayName: false,
+      disableSignUp: {
+        status: true,
+        adminEmail: "",
+      },
+    },
+  ],
 };
 
 export function Login() {
