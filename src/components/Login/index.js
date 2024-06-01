@@ -16,7 +16,6 @@ export const uiConfig = {
       requireDisplayName: false,
       disableSignUp: {
         status: true,
-        adminEmail: "",
       },
     },
   ],
