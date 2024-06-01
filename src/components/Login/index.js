@@ -15,7 +15,6 @@ export const uiConfig = {
   disableSignUp: {
     status: true,
     adminEmail: "",
-    helpLink: "https://www.example.com/trouble_signing_in",
   },
 };
 
