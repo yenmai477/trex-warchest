@@ -136,7 +136,16 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-  plugins: [[require.resolve("docusaurus-plugin-search-local"), {}]],
+  plugins: [
+    [require.resolve("docusaurus-plugin-search-local"), {}],
+    [
+      "docusaurus-plugin-dotenv",
+      {
+        path: "./.env",
+        systemvars: true,
+      },
+    ],
+  ],
 };
 
 export default config;
