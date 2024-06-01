@@ -13,7 +13,8 @@ export const uiConfig = {
   signInOptions: [
     {
       provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      signInMethod: "password",
+      signInMethod:
+        firebase.auth.EmailAuthProvider.EMAIL_PASSWORD_SIGN_IN_METHOD,
       requireDisplayName: false,
       disableSignUp: {
         status: true,
