@@ -51,7 +51,12 @@ jobs:
           
       # Netlify import env
       - name: Netlify import env
-        run: netlify env:import .env --replace-existing --context deploy-preview
+        run: |
+          netlify link
+          netlify env:import .env --replace-existing
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         
       # Create Preview URL for testing
       - name: Build and Create Preview URL
