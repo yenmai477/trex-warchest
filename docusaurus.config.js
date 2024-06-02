@@ -146,6 +146,10 @@ const config = {
       },
     ],
   ],
+  customFields: {
+    // application environment (i.e. staging or prod)
+    BUILD: process.env.BUILD,
+  },
 };
 
 export default config;
