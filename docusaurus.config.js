@@ -5,11 +5,12 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
+import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Trex WarChest",
+  tagline: "Trex WarChest are cool",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -21,7 +22,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  projectName: "trex-warchest", // Usually your repo name.
 
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
@@ -66,9 +67,9 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
+        title: "Trex-Warchest",
         logo: {
-          alt: "My Site Logo",
+          alt: "Trex-Warchest Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -145,6 +146,9 @@ const config = {
         systemvars: true,
       },
     ],
+    require.resolve("docusaurus-plugin-sass"),
+    require.resolve("@docusaurus/plugin-ideal-image"),
+    tailwindPlugin,
   ],
   customFields: {
     // application environment (i.e. staging or prod)
