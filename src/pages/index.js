@@ -9,7 +9,7 @@ import avatar from "@site/static/img/profile.jpg";
 const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com/pkosiec",
+    url: "https://github.com/xyz",
     svg: (
       <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <title>GitHub</title>
