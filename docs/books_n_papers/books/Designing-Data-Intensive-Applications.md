@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+title: Designing Data-Intensive Applications
 ---
 
 # Congratulations!
