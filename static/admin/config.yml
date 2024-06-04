@@ -20,6 +20,8 @@ collections:
     format: "frontmatter"
     editor:
       preview: false
+    nested:
+      depth: 20 # max depth to show in the collection tree
     fields:
       # - name: 'menu'
       #   label: 'Menu'
@@ -69,6 +71,8 @@ collections:
     format: "frontmatter"
     editor:
       preview: false
+    nested:
+      depth: 20 # max depth to show in the collection tree
     fields:
       - { label: "Slug", name: "id", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
@@ -122,20 +126,22 @@ collections:
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "pages"
-    label: "Pages"
-    label_singular: "Page"
-    folder: "src/pages"
-    path: "{{id}}"
-    create: true
-    slug: "{{id}}"
-    identifier_field: "title"
-    extension: "js"
-    format: "frontmatter"
-    editor:
-      preview: false
-    fields:
-      - { label: "Slug", name: "id", widget: "string" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+  # - name: "pages"
+  #   label: "Pages"
+  #   label_singular: "Page"
+  #   folder: "src/pages"
+  #   path: "{{id}}"
+  #   create: true
+  #   slug: "{{id}}"
+  #   identifier_field: "title"
+  #   extension: "js"
+  #   format: "frontmatter"
+  #   editor:
+  #     preview: false
+  #   nested:
+  #     depth: 20 # max depth to show in the collection tree
+  #   fields:
+  #     - { label: "Slug", name: "id", widget: "string" }
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Description", name: "description", required: false }
+  #     - { label: "Body", name: "body", widget: "markdown" }
