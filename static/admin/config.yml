@@ -63,7 +63,7 @@ collections:
           label: "Keywords",
           name: "keywords",
           widget: "list",
-          default: undefined,
+          default: [docs],
           required: false,
         }
       - { label: "Description", name: "description", required: false }
