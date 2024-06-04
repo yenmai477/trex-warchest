@@ -3,6 +3,8 @@ backend:
   branch: main
   repo: yenmai477/yenmai477.github.io
 
+publish_mode: editorial_workflow
+
 # These lines should *not* be indented
 media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/img/"
@@ -21,23 +23,25 @@ collections:
     editor:
       preview: false
     nested:
-      depth: 20 # max depth to show in the collection tree
-      summary: "{{label}}" # optional summary for a tree node, defaults to the inferred title field
+      depth: 100 # max depth to show in the collection tree
+      summary: "{{title}}" # optional summary for a tree node, defaults to the inferred title field
     fields:
       # - name: 'menu'
       #   label: 'Menu'
-      - { label: "Slug", name: "id", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Hide Title",
           name: "hide_title",
           widget: "boolean",
+          required: false,
           default: false,
         }
       - {
           label: "Hide Table of Contents",
           name: "hide_table_of_contents",
           widget: "boolean",
+          required: false,
           default: false,
         }
       - {
@@ -73,10 +77,10 @@ collections:
     editor:
       preview: false
     nested:
-      depth: 20 # max depth to show in the collection tree
-      summary: "{{label}}" # optional summary for a tree node, defaults to the inferred title field
+      depth: 100 # max depth to show in the collection tree
+      summary: "{{title}}" # optional summary for a tree node, defaults to the inferred title field
     fields:
-      - { label: "Slug", name: "id", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", required: false }
       - {
