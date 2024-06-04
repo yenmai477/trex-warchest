@@ -2,6 +2,7 @@ backend:
   name: github
   branch: main
   repo: yenmai477/yenmai477.github.io
+  squash_merges: true
 
 publish_mode: editorial_workflow
 
