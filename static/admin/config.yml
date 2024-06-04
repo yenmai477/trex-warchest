@@ -22,7 +22,7 @@ collections:
     folder: "docs"
     path: "{{menu}}/{{id}}"
     create: true
-    slug: "{{id}}"
+    slug: "{{title}}"
     identifier_field: "title"
     extension: "md"
     format: "frontmatter"
