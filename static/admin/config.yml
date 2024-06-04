@@ -53,12 +53,7 @@ collections:
           required: false,
           default: false,
         }
-      - {
-          label: "Sidebar Label",
-          name: "sidebar_label",
-          widget: "string",
-          required: false,
-        }
+      - { label: "Sidebar Label", name: "sidebar_label", widget: "string" }
       - {
           label: "Keywords",
           name: "keywords",
