@@ -4,6 +4,11 @@ backend:
   repo: yenmai477/yenmai477.github.io
   squash_merges: true
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 publish_mode: editorial_workflow
 
 # These lines should *not* be indented
