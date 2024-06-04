@@ -1,5 +1,4 @@
 ---
-id: /bbbb
 title: Designing Data-Intensive Applications
 hide_title: false
 hide_table_of_contents: false
