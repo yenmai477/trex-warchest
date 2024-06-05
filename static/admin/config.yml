@@ -1,0 +1,156 @@
+backend:
+  name: github
+  branch: main
+  repo: yenmai477/yenmai477.github.io
+  squash_merges: true
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+publish_mode: editorial_workflow
+
+# These lines should *not* be indented
+media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/img/"
+
+collections:
+  - name: "docs"
+    label: "Docs"
+    label_singular: "Doc"
+    folder: "docs"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    editor:
+      preview: false
+    nested:
+      depth: 100 # max depth to show in the collection tree
+      summary: "{{title}}" # optional summary for a tree node, defaults to the inferred title field
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    meta: { path: { widget: string, label: "Path", index_file: "index" } }
+    fields:
+      # - name: 'menu'
+      #   label: 'Menu'
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Hide Title",
+          name: "hide_title",
+          widget: "boolean",
+          required: false,
+          default: false,
+        }
+      - {
+          label: "Hide Table of Contents",
+          name: "hide_table_of_contents",
+          widget: "boolean",
+          required: false,
+          default: false,
+        }
+      - { label: "Sidebar Label", name: "sidebar_label", widget: "string" }
+      - {
+          label: "Keywords",
+          name: "keywords",
+          widget: "list",
+          default: [docs],
+          required: false,
+        }
+      - { label: "Description", name: "description", required: false }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          allow_multiple: false,
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
+    create: true
+    identifier_field: "title"
+    extension: "md"
+    format: "frontmatter"
+    editor:
+      preview: false
+    nested:
+      depth: 100 # max depth to show in the collection tree
+      summary: "{{title}}" # optional summary for a tree node, defaults to the inferred title field
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    meta: { path: { widget: string, label: "Path", index_file: "index" } }
+    fields:
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", required: false }
+      - {
+          label: "Author Title",
+          name: "author_title",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Author URL",
+          name: "author_url",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Author Image",
+          name: "author_image_url",
+          widget: "image",
+          allow_multiple: false,
+          required: false,
+        }
+      - {
+          label: "Hide Table of Contents",
+          name: "hide_table_of_contents",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          default: [],
+          required: false,
+        }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          timeFormat: false,
+        }
+      - { label: "Description", name: "description", required: false }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          allow_multiple: false,
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  # - name: "pages"
+  #   label: "Pages"
+  #   label_singular: "Page"
+  #   folder: "src/pages"
+  #   path: "{{id}}"
+  #   create: true
+  #   slug: "{{id}}"
+  #   identifier_field: "title"
+  #   extension: "js"
+  #   format: "frontmatter"
+  #   editor:
+  #     preview: false
+  #   nested:
+  #     depth: 20 # max depth to show in the collection tree
+  #   fields:
+  #     - { label: "Slug", name: "id", widget: "string" }
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Description", name: "description", required: false }
+  #     - { label: "Body", name: "body", widget: "markdown" }
