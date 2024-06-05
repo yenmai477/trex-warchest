@@ -20,10 +20,7 @@ collections:
     label: "Docs"
     label_singular: "Doc"
     folder: "docs"
-    path: "{{menu}}/{{slug}}"
     create: true
-    slug: "{{title}}"
-    identifier_field: "title"
     extension: "md"
     format: "frontmatter"
     editor:
@@ -74,7 +71,6 @@ collections:
     label: "Blog"
     folder: "blog"
     create: true
-    slug: "{{date}}-{{id}}"
     identifier_field: "title"
     extension: "md"
     format: "frontmatter"
